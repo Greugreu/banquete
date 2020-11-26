@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.nfactory.crudmysql;
+package fr.nfactory.crudmysql.dao.impl;
 
-import fr.nfactory.crudmysql.beans.Alcool;
-import fr.nfactory.crudmysql.dao.DaoFactory;
-import fr.nfactory.crudmysql.gui.MainFrame;
+import fr.nfactory.crudmysql.beans.Clients;
+import fr.nfactory.crudmysql.dao.ClientsDao;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
