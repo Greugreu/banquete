@@ -29,9 +29,9 @@ public class Front extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        leftLayout = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        leftContainer = new javax.swing.JPanel();
         clientsButton = new javax.swing.JButton();
         offresButton = new javax.swing.JButton();
         statsButton = new javax.swing.JButton();
@@ -46,6 +46,7 @@ public class Front extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        clientModifier1 = new javax.swing.JButton();
         offresContainer = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         offers = new javax.swing.JPanel();
@@ -100,16 +101,17 @@ public class Front extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(204, 51, 0));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1280, 720));
         jPanel3.setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(24, 171, 232));
-        jPanel2.setPreferredSize(new java.awt.Dimension(139, 720));
+        leftLayout.setBackground(new java.awt.Color(24, 171, 232));
+        leftLayout.setPreferredSize(new java.awt.Dimension(139, 720));
 
         jPanel1.setBackground(new java.awt.Color(24, 171, 232));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jPanel4.setBackground(new java.awt.Color(24, 171, 232));
-        jPanel4.setLayout(new java.awt.GridLayout(3, 1, 0, 20));
+        leftContainer.setBackground(new java.awt.Color(24, 171, 232));
+        leftContainer.setLayout(new java.awt.GridLayout(3, 1, 0, 20));
 
         clientsButton.setBackground(new java.awt.Color(255, 255, 255));
         clientsButton.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
@@ -119,7 +121,7 @@ public class Front extends javax.swing.JFrame {
                 clientsButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(clientsButton);
+        leftContainer.add(clientsButton);
 
         offresButton.setBackground(new java.awt.Color(255, 255, 255));
         offresButton.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
@@ -129,7 +131,7 @@ public class Front extends javax.swing.JFrame {
                 offresButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(offresButton);
+        leftContainer.add(offresButton);
 
         statsButton.setBackground(new java.awt.Color(255, 255, 255));
         statsButton.setFont(new java.awt.Font("Montserrat", 1, 12)); // NOI18N
@@ -139,24 +141,24 @@ public class Front extends javax.swing.JFrame {
                 statsButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(statsButton);
+        leftContainer.add(statsButton);
 
-        jPanel1.add(jPanel4, new java.awt.GridBagConstraints());
+        jPanel1.add(leftContainer, new java.awt.GridBagConstraints());
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout leftLayoutLayout = new javax.swing.GroupLayout(leftLayout);
+        leftLayout.setLayout(leftLayoutLayout);
+        leftLayoutLayout.setHorizontalGroup(
+            leftLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        leftLayoutLayout.setVerticalGroup(
+            leftLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(leftLayoutLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1074, Short.MAX_VALUE))
+                .addGap(0, 1016, Short.MAX_VALUE))
         );
 
-        jPanel3.add(jPanel2, java.awt.BorderLayout.LINE_START);
+        jPanel3.add(leftLayout, java.awt.BorderLayout.LINE_START);
 
         rightLayout.setBackground(new java.awt.Color(255, 255, 255));
         rightLayout.setLayout(new java.awt.CardLayout());
@@ -203,6 +205,7 @@ public class Front extends javax.swing.JFrame {
         loginContainer.add(loginButton);
 
         clientListContainer.setBackground(new java.awt.Color(255, 255, 255));
+        clientListContainer.setPreferredSize(new java.awt.Dimension(1056, 720));
         clientListContainer.setVisible(false);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -249,30 +252,49 @@ public class Front extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(5).setResizable(false);
         }
 
+        clientModifier1.setBackground(new java.awt.Color(255, 255, 255));
+        clientModifier1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        clientModifier1.setForeground(new java.awt.Color(24, 171, 232));
+        clientModifier1.setText("Voir le profil");
+        clientModifier1.setMaximumSize(new java.awt.Dimension(147, 47));
+        clientModifier1.setMinimumSize(new java.awt.Dimension(147, 47));
+        clientModifier1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clientModifier1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout clientListContainerLayout = new javax.swing.GroupLayout(clientListContainer);
         clientListContainer.setLayout(clientListContainerLayout);
         clientListContainerLayout.setHorizontalGroup(
             clientListContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientListContainerLayout.createSequentialGroup()
+                .addGap(387, 425, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(424, 424, 424))
             .addGroup(clientListContainerLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1046, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(clientListContainerLayout.createSequentialGroup()
-                .addGap(387, 387, 387)
-                .addComponent(jLabel1)
-                .addGap(387, 387, 387))
+                .addGap(500, 500, 500)
+                .addComponent(clientModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         clientListContainerLayout.setVerticalGroup(
             clientListContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clientListContainerLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addGap(54, 54, 54)
+                .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(888, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(clientModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(717, Short.MAX_VALUE))
         );
 
         offresContainer.setBackground(new java.awt.Color(255, 255, 255));
+        offresContainer.setPreferredSize(new java.awt.Dimension(1141, 720));
         offresContainer.setVisible(false);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -402,7 +424,7 @@ public class Front extends javax.swing.JFrame {
         offresContainerLayout.setVerticalGroup(
             offresContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(offresContainerLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addGap(46, 46, 46)
                 .addComponent(offers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -410,6 +432,7 @@ public class Front extends javax.swing.JFrame {
         );
 
         statsContainer.setBackground(new java.awt.Color(255, 255, 255));
+        statsContainer.setPreferredSize(new java.awt.Dimension(1141, 720));
         statsContainer.setVisible(false);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -429,14 +452,14 @@ public class Front extends javax.swing.JFrame {
         statsContainerLayout.setVerticalGroup(
             statsContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statsContainerLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel3)
-                .addContainerGap(1369, Short.MAX_VALUE))
+                .addContainerGap(642, Short.MAX_VALUE))
         );
 
         clientContainer.setBackground(new java.awt.Color(255, 255, 255));
         clientContainer.setPreferredSize(new java.awt.Dimension(1141, 720));
-        offresContainer.setVisible(false);
+        clientContainer.setVisible(false);
 
         clientName.setBackground(new java.awt.Color(255, 255, 255));
         clientName.setFont(new java.awt.Font("Montserrat", 1, 30)); // NOI18N
@@ -730,14 +753,14 @@ public class Front extends javax.swing.JFrame {
                             .addComponent(clientInfoContainer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(27, 27, 27)
                         .addComponent(clientInfoContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         clientContainerLayout.setVerticalGroup(
             clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clientContainerLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(41, 41, 41)
                 .addComponent(clientName)
-                .addGap(18, 18, 18)
+                .addGap(41, 41, 41)
                 .addGroup(clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(clientInfoContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(clientContainerLayout.createSequentialGroup()
@@ -757,7 +780,7 @@ public class Front extends javax.swing.JFrame {
                 .addComponent(loginContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(447, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1141, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(clientContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -767,18 +790,18 @@ public class Front extends javax.swing.JFrame {
         rightContainerLayout.setVerticalGroup(
             rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightContainerLayout.createSequentialGroup()
-                .addContainerGap(979, Short.MAX_VALUE)
+                .addContainerGap(921, Short.MAX_VALUE)
                 .addComponent(loginContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(279, 279, 279))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1362, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(rightContainerLayout.createSequentialGroup()
-                    .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(clientContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(clientContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 649, Short.MAX_VALUE)))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1362, Short.MAX_VALUE))
         );
 
         rightLayout.add(rightContainer, "card2");
@@ -834,6 +857,14 @@ public class Front extends javax.swing.JFrame {
         clientListContainer.setVisible(false);
         clientContainer.setVisible(false);
     }//GEN-LAST:event_statsButtonActionPerformed
+
+    private void clientModifier1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientModifier1ActionPerformed
+        loginContainer.setVisible(false);
+        offresContainer.setVisible(false);
+        statsContainer.setVisible(false);
+        clientListContainer.setVisible(false);
+        clientContainer.setVisible(true);
+    }//GEN-LAST:event_clientModifier1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -921,6 +952,7 @@ public class Front extends javax.swing.JFrame {
     private javax.swing.JLabel clientMailTitle;
     private javax.swing.JLabel clientMailVariable;
     private javax.swing.JButton clientModifier;
+    private javax.swing.JButton clientModifier1;
     private javax.swing.JLabel clientName;
     private javax.swing.JLabel clientNameTitle;
     private javax.swing.JLabel clientNameVariable;
@@ -935,11 +967,11 @@ public class Front extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JPanel leftContainer;
+    private javax.swing.JPanel leftLayout;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginContainer;
     private javax.swing.JLabel loginLabel;
