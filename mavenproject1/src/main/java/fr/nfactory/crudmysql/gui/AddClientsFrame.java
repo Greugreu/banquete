@@ -5,7 +5,7 @@
  */
 package fr.nfactory.crudmysql.gui;
 
-import fr.nfactory.crudmysql.beans.Alcool;
+import fr.nfactory.crudmysql.beans.Clients;
 import fr.nfactory.crudmysql.dao.DaoFactory;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -24,21 +24,21 @@ import javax.swing.JTextField;
  *
  * @author ludivine
  */
-public class AddAlcoolFrame extends JFrame {
+public class AddClientsFrame extends JFrame {
     
-    private Alcool alcool;
-    private JTextField name;
-    private JTextField degre;
-    private JTextField volume;
+    private Clients clients;
+    private JTextField clientsName;
+    private JTextField clientsSurname;
+    private JTextField birthdate;
     private JButton save;
     private MainFrame maman;
     
-    public AddAlcoolFrame(MainFrame maman){
+    public AddClientsFrame(MainFrame maman){
         super();
-        setTitle("Nouvel alcoll");
+        setTitle("Nouveau client");
         setBounds(100, 100, 200, 400);
         setMinimumSize(new Dimension(200,200));
-        this.alcool = new Alcool();
+        this.clients = new Clients();
         this.maman = maman;
         initComponent();
     }
@@ -48,18 +48,18 @@ public class AddAlcoolFrame extends JFrame {
         JPanel panel = new JPanel(new GridLayout(4, 2));
         JLabel label1 = new JLabel("Nom");
         panel.add(label1);
-        name = new JTextField();
-        panel.add(name);
+        clientsName = new JTextField();
+        panel.add(clientsName);
         
-        JLabel label2 = new JLabel("Degré");
+        JLabel label2 = new JLabel("Prénom");
         panel.add(label2);
-        degre = new JTextField();
-        panel.add(degre);
+        clientsSurname = new JTextField();
+        panel.add(clientsSurname);
         
-        JLabel label3 = new JLabel("Volume");
+        JLabel label3 = new JLabel("Date de naissance");
         panel.add(label3);
-        volume = new JTextField();
-        panel.add(volume);
+        birthdate = new JTextField();
+        panel.add(birthdate);
         
         save = new JButton("enregistrer");
         panel.add(save);
@@ -67,13 +67,12 @@ public class AddAlcoolFrame extends JFrame {
         save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                alcool.setName(name.getText());
-                alcool.setDegre(Double.parseDouble(degre.getText()));                
-                alcool.setVolume(Double.parseDouble(volume.getText()));
+                clients.setClientsName(clientsName.getText());
+                clients.setClientsSurname(clientsSurname.getText());                
                 try {
-                    DaoFactory.getAlcoolDao().add(alcool);
+                    DaoFactory.getClientsDao().add(clients);
                 } catch (SQLException ex) {
-                    Logger.getLogger(AddAlcoolFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(AddClientsFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 setVisible(false);
                 maman.refresh();

@@ -5,7 +5,7 @@
  */
 package fr.nfactory.crudmysql.gui;
 
-import fr.nfactory.crudmysql.beans.Alcool;
+import fr.nfactory.crudmysql.beans.Clients;
 import fr.nfactory.crudmysql.dao.DaoFactory;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -29,35 +29,35 @@ import javax.swing.SwingUtilities;
  */
 public class MainFrame extends JFrame{
     
-    private ArrayList<Alcool> alcools;
+    private ArrayList<Clients> clients;
     private JPanel panel;
-    private JButton addAlcoolBtn;
+    private JButton addClientsBtn;
     private DefaultListModel model = new DefaultListModel();
     
-    public MainFrame(ArrayList<Alcool> alcools ){
+    public MainFrame(ArrayList<Clients> clients ){
         super();
         setVisible(true);
-        setTitle("La carte");
+        setTitle("Liste des clients");
         setBounds(100, 100, 450, 600);
         setMinimumSize(new Dimension(200,200));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.alcools = alcools;
+        this.clients = clients;
         initComponent();
     }
     
     private void initComponent(){
         this.panel = new JPanel(new BorderLayout());
-        for(Alcool a : alcools){
+        for(Clients a : clients){
             model.addElement(a);
         }
         JList list = new JList(model);
         panel.add(list,BorderLayout.NORTH);
-        this.addAlcoolBtn = new JButton("Ajouter un alcool");
-        panel.add(this.addAlcoolBtn, BorderLayout.SOUTH);
-        addAlcoolBtn.addActionListener(new ActionListener() {
+        this.addClientsBtn = new JButton("Ajouter un client");
+        panel.add(this.addClientsBtn, BorderLayout.SOUTH);
+        addClientsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new AddAlcoolFrame(getThis()).setVisible(true);
+                new AddClientsFrame(getThis()).setVisible(true);
             }
         });
         getContentPane().add(panel);
@@ -65,8 +65,8 @@ public class MainFrame extends JFrame{
     
     public void refresh(){
         try {
-            alcools = DaoFactory.getAlcoolDao().getAll();
-            model.addElement(alcools.get(alcools.size()-1));
+            clients = DaoFactory.getClientsDao().getAll();
+            model.addElement(clients.get(clients.size()-1));
             //initComponent();
             //SwingUtilities.updateComponentTreeUI(this);
         } catch (SQLException ex) {

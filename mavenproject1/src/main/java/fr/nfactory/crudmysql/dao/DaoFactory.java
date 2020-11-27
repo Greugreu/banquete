@@ -5,7 +5,7 @@
  */
 package fr.nfactory.crudmysql.dao;
 
-import fr.nfactory.crudmysql.dao.impl.AlcoolDaoJdbc;
+import fr.nfactory.crudmysql.dao.impl.ClientsDaoJdbc;
 import java.sql.SQLException;
 
 /**
@@ -15,18 +15,18 @@ import java.sql.SQLException;
 public class DaoFactory {
     
     // static on passe par la classe et non l'objet pour y accéder
-    private static AlcoolDao alcoolDao;
+    private static ClientsDao clientsDao;
     
     private DaoFactory(){
         throw new IllegalStateException();
     }
     
     // Objectif : singleton, une instance par exécution, évite les problèmes d'incohérence en DB et d'accès concurrents à la 
-    public static AlcoolDao getAlcoolDao() throws SQLException{
-        if(alcoolDao == null){
-            alcoolDao = new AlcoolDaoJdbc();
+    public static ClientsDao getClientsDao() throws SQLException{
+        if(clientsDao == null){
+            clientsDao = new ClientsDaoJdbc();
         }
-        return alcoolDao;
+        return clientsDao;
     }
     
 }

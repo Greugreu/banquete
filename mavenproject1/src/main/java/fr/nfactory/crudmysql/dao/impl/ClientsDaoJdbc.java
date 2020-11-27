@@ -16,9 +16,9 @@ import java.util.ArrayList;
  *
  * @author ludivine
  */
-public class ClientslDaoJdbc extends JdbcDao implements ClientsDao{
+public class ClientsDaoJdbc extends JdbcDao implements ClientsDao{
     
-    public ClientslDaoJdbc() throws SQLException{
+    public ClientsDaoJdbc() throws SQLException{
         super();
     }
 
@@ -26,7 +26,7 @@ public class ClientslDaoJdbc extends JdbcDao implements ClientsDao{
     public void add(Clients clients) {
         try{
             // préviens de l'injection SQL
-            String sql = "INSERT INTO clients(clientsNme, clientsSurname, birthdate, tel, situation, kids, income, isContact, job, mail, adress, gender, createdAt, modifiedAt) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO clients(clientsName, clientsSurname, birthdate, tel, situation, kids, income, isContact, job, mail, adress, gender, createdAt, modifiedAt) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement statement = getConnection().prepareStatement(sql);
             statement.setString(1, clients.getClientsName());
             statement.setString(2, clients.getClientsSurname());
@@ -110,7 +110,6 @@ public class ClientslDaoJdbc extends JdbcDao implements ClientsDao{
     
     private Clients transformSqlToClients(ResultSet rs) throws SQLException{
         Clients clients = new Clients();
-        clients.setIdClients(rs.getInt("idclients"));
         clients.setClientsName(rs.getString("clientsName"));
         clients.setClientsSurname(rs.getString("clientsSurname"));
         clients.setBirthdate(rs.getInt("birthdate"));

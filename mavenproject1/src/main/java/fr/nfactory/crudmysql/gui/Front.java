@@ -5,6 +5,9 @@
  */
 package fr.nfactory.crudmysql.gui;
 
+import fr.nfactory.crudmysql.beans.Clients;
+import java.util.ArrayList;
+
 /**
  *
  * @author Antoine
@@ -17,6 +20,10 @@ public class Front extends javax.swing.JFrame {
     public Front() {
         initComponents();
         
+    }
+
+    public Front(ArrayList<Clients> clients) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -650,7 +657,7 @@ public class Front extends javax.swing.JFrame {
                 .addGroup(clientInfoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(clientProTitle)
                     .addComponent(clientProVariable))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
                 .addComponent(clientModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -749,7 +756,7 @@ public class Front extends javax.swing.JFrame {
                         .addComponent(clientInfoContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addGroup(clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(clientInfoContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(clientInfoContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
                             .addComponent(clientInfoContainer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(27, 27, 27)
                         .addComponent(clientInfoContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -780,12 +787,12 @@ public class Front extends javax.swing.JFrame {
                 .addComponent(loginContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(447, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1141, Short.MAX_VALUE))
+                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(clientContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE)
+                .addComponent(clientContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1151, Short.MAX_VALUE))
         );
         rightContainerLayout.setVerticalGroup(
             rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

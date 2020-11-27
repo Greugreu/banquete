@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.nfactory.crudmysql.dao.impl;
+package fr.nfactory.crudmysql;
 
 import fr.nfactory.crudmysql.beans.Clients;
-import fr.nfactory.crudmysql.dao.ClientsDao;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import fr.nfactory.crudmysql.dao.DaoFactory;
+import fr.nfactory.crudmysql.gui.MainFrame;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -25,8 +24,8 @@ public class Launcher {
     // ... peut le remplace par String[] appel => main(["toto","zozo"])
     public static void main(String... args){
         try {
-            ArrayList<Alcool> alcools = DaoFactory.getAlcoolDao().getAll();
-            MainFrame mf = new MainFrame(alcools);
+            ArrayList<Clients> clients = DaoFactory.getClientsDao().getAll();
+            MainFrame mf = new MainFrame(clients);
             //mf.setVisible(true);
             
             // test du crud

@@ -202,14 +202,14 @@
                           <EmptySpace pref="447" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="clientListContainer" alignment="0" pref="1141" max="32767" attributes="0"/>
+                          <Component id="clientListContainer" alignment="0" pref="1151" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
-                          <Component id="offresContainer" alignment="0" max="32767" attributes="0"/>
-                          <Component id="clientContainer" alignment="0" max="32767" attributes="0"/>
+                          <Component id="offresContainer" alignment="0" pref="1151" max="32767" attributes="0"/>
+                          <Component id="clientContainer" alignment="0" pref="1151" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
-                          <Component id="statsContainer" alignment="0" max="32767" attributes="0"/>
+                          <Component id="statsContainer" alignment="0" pref="1151" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -818,7 +818,7 @@
                                       <Component id="clientInfoContainer" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="clientInfoContainer1" max="32767" attributes="0"/>
+                                          <Component id="clientInfoContainer1" pref="351" max="32767" attributes="0"/>
                                           <Component id="clientInfoContainer3" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -1002,7 +1002,7 @@
                                       <Component id="clientProTitle" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="clientProVariable" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="166" max="32767" attributes="0"/>
+                                  <EmptySpace pref="175" max="32767" attributes="0"/>
                                   <Component id="clientModifier" min="-2" pref="42" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>

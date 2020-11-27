@@ -5,8 +5,8 @@
  */
 package fr.nfactory.crudmysql.dao.impl;
 
-import fr.nfactory.crudmysql.beans.Alcool;
-import fr.nfactory.crudmysql.dao.AlcoolDao;
+import fr.nfactory.crudmysql.beans.Offers;
+import fr.nfactory.crudmysql.dao.OffersDao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,21 +16,25 @@ import java.util.ArrayList;
  *
  * @author ludivine
  */
-public class AlcoolDaoJdbc extends JdbcDao implements AlcoolDao{
+public class OffersDaoJdbc extends JdbcDao implements OffersDao{
     
-    public AlcoolDaoJdbc() throws SQLException{
+    public OffersDaoJdbc() throws SQLException{
         super();
     }
 
     @Override
-    public void add(Alcool alcool) {
+    public void add(Offers offers) {
         try{
             // préviens de l'injection SQL
-            String sql = "INSERT INTO alcools(name,degre,volume) VALUES(?,?,?)";
+            String sql = "INSERT INTO offers(offersName, offersPrice, ageMini, ageMax, details, createdAt, modifiedAt) VALUES ?,?,?,?,?,?,?";
             PreparedStatement statement = getConnection().prepareStatement(sql);
-            statement.setString(1, alcool.getName());
-            statement.setDouble(2, alcool.getDegre());
-            statement.setDouble(3, alcool.getVolume()); 
+            statement.setString(1, offers.getOffersName());
+            statement.setFloat(2, offers.getOffersPrice());
+            statement.setInt(3, offers.getAgeMini());
+            statement.setInt(4, offers.getAgeMax());
+            statement.setString(5, offers.getDetails());
+            statement.setInt(13, offers.getCreatedAt());
+            statement.setInt(14, offers.getModifiedAt());
             // ATTENTION PAS SELECT => executeUpdate();
             statement.executeUpdate();
         }catch(SQLException e){
@@ -39,16 +43,16 @@ public class AlcoolDaoJdbc extends JdbcDao implements AlcoolDao{
     }
 
     @Override
-    public ArrayList<Alcool> getAll() {
-        ArrayList<Alcool> alcools = new ArrayList<>();
+    public ArrayList<Offers> getAll() {
+        ArrayList<Offers> offers = new ArrayList<>();
         try{
-            String sql = "SELECT * FROM alcools";
+            String sql = "SELECT * FROM offers";
             PreparedStatement ps = getConnection().prepareCall(sql);
             ResultSet rs = ps.executeQuery();
             // on va parcourir les lignes de la table "sql' renvoyée
             while(rs.next()){
                 // transformer la ligne sql en un object java
-                alcools.add(transformSqlToAlcool(rs));
+                offers.add(transformSqlToOffers(rs));
             }
         } catch (SQLException se){
             // affiche l'erreur en console
@@ -56,21 +60,21 @@ public class AlcoolDaoJdbc extends JdbcDao implements AlcoolDao{
         } catch (Exception e){
             e.printStackTrace();
         }
-        return alcools;
+        return offers;
     }
 
     @Override
-    public Alcool get(int id) {
-        Alcool a = new Alcool();
+    public Offers get(int idoffers) {
+        Offers a = new Offers();
         try{
-            String sql = "SELECT * FROM alcools WHERE id = ?";
+            String sql = "SELECT * FROM offers WHERE idoffers = ?";
             PreparedStatement ps = getConnection().prepareCall(sql);
-            ps.setInt(1, id);
+            ps.setInt(1, idoffers);
             ResultSet rs = ps.executeQuery();
             // on va parcourir les lignes de la table "sql' renvoyée
             if(rs.next()){
                 // transformer la ligne sql en un object java
-                a = transformSqlToAlcool(rs);
+                a = transformSqlToOffers(rs);
             }
         } catch (SQLException se){
             // affiche l'erreur en console
@@ -82,12 +86,12 @@ public class AlcoolDaoJdbc extends JdbcDao implements AlcoolDao{
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(int idoffers) {
         try{
             // préviens de l'injection SQL
-            String sql = "DELETE FROM alcools  WHERE id = ?";
+            String sql = "DELETE FROM offers  WHERE id = ?";
             PreparedStatement statement = getConnection().prepareStatement(sql);
-            statement.setInt(1, id);
+            statement.setInt(1, idoffers);
             // ATTENTION PAS SELECT => executeUpdate();
             statement.executeUpdate();
             return true;
@@ -97,13 +101,17 @@ public class AlcoolDaoJdbc extends JdbcDao implements AlcoolDao{
         return false;
     }
     
-    private Alcool transformSqlToAlcool(ResultSet rs) throws SQLException{
-        Alcool alcool = new Alcool();
-        alcool.setId(rs.getInt("id"));
-        alcool.setName(rs.getString("name"));
-        alcool.setDegre(rs.getDouble("degre"));
-        alcool.setVolume(rs.getDouble("volume"));
-        return alcool;
+    private Offers transformSqlToOffers(ResultSet rs) throws SQLException{
+        Offers offers = new Offers();
+        offers.setOffersName(rs.getString("offersName"));
+        offers.setOffersPrice(rs.getFloat("offersPrice"));
+        offers.setAgeMini(rs.getInt("ageMini"));
+        offers.setAgeMax(rs.getInt("ageMax"));
+        offers.setDetails(rs.getString("details"));
+        offers.setCreatedAt(rs.getInt("createdAt"));
+        offers.setModifiedAt(rs.getInt("modifiedAt"));
+        
+        return offers;
     }
     
 }

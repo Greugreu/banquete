@@ -5,16 +5,16 @@
  */
 package fr.nfactory.crudmysql.dao;
 
-import fr.nfactory.crudmysql.beans.Alcool;
+import fr.nfactory.crudmysql.beans.Offers;
 import java.util.ArrayList;
 
 /**
  *
  * @author ludivine
  */
-public interface AlcoolDao {
-    public void add(Alcool alcool);
-    public ArrayList<Alcool> getAll();
-    public Alcool get(int id);
-    public boolean delete(int id);    
+public interface OffersDao {
+    public void add(Offers offers);
+    public ArrayList<Offers> getAll();
+    public Offers get(int idoffers);
+    public boolean delete(int idoffers);    
 }
