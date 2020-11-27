@@ -53,7 +53,8 @@ public class Front extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        clientModifier1 = new javax.swing.JButton();
+        clientAdd = new javax.swing.JButton();
+        clientModifier2 = new javax.swing.JButton();
         offresContainer = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         offers = new javax.swing.JPanel();
@@ -302,15 +303,27 @@ public class Front extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        clientModifier1.setBackground(new java.awt.Color(255, 255, 255));
-        clientModifier1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
-        clientModifier1.setForeground(new java.awt.Color(24, 171, 232));
-        clientModifier1.setText("Voir le profil");
-        clientModifier1.setMaximumSize(new java.awt.Dimension(147, 47));
-        clientModifier1.setMinimumSize(new java.awt.Dimension(147, 47));
-        clientModifier1.addActionListener(new java.awt.event.ActionListener() {
+        clientAdd.setBackground(new java.awt.Color(255, 255, 255));
+        clientAdd.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        clientAdd.setForeground(new java.awt.Color(24, 171, 232));
+        clientAdd.setText("Ajouter un client");
+        clientAdd.setMaximumSize(new java.awt.Dimension(147, 47));
+        clientAdd.setMinimumSize(new java.awt.Dimension(147, 47));
+        clientAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clientModifier1ActionPerformed(evt);
+                clientAddActionPerformed(evt);
+            }
+        });
+
+        clientModifier2.setBackground(new java.awt.Color(255, 255, 255));
+        clientModifier2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        clientModifier2.setForeground(new java.awt.Color(24, 171, 232));
+        clientModifier2.setText("Voir le profil");
+        clientModifier2.setMaximumSize(new java.awt.Dimension(147, 47));
+        clientModifier2.setMinimumSize(new java.awt.Dimension(147, 47));
+        clientModifier2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clientModifier2ActionPerformed(evt);
             }
         });
 
@@ -319,7 +332,7 @@ public class Front extends javax.swing.JFrame {
         clientListContainerLayout.setHorizontalGroup(
             clientListContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientListContainerLayout.createSequentialGroup()
-                .addGap(387, 425, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(424, 424, 424))
             .addGroup(clientListContainerLayout.createSequentialGroup()
@@ -327,8 +340,10 @@ public class Front extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1046, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(clientListContainerLayout.createSequentialGroup()
-                .addGap(500, 500, 500)
-                .addComponent(clientModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(400, 400, 400)
+                .addComponent(clientAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(clientModifier2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         clientListContainerLayout.setVerticalGroup(
@@ -338,9 +353,11 @@ public class Front extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(clientModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(691, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addGroup(clientListContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(clientAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clientModifier2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         offresContainer.setBackground(new java.awt.Color(255, 255, 255));
@@ -1254,7 +1271,7 @@ public class Front extends javax.swing.JFrame {
                 .addGroup(rightContainerLayout.createSequentialGroup()
                     .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(clientContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 649, Short.MAX_VALUE)))
+                    .addComponent(clientContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE))
         );
@@ -1316,13 +1333,17 @@ public class Front extends javax.swing.JFrame {
         clientContainer.setVisible(false);
     }//GEN-LAST:event_statsButtonActionPerformed
 
-    private void clientModifier1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientModifier1ActionPerformed
+    private void clientAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientAddActionPerformed
         loginContainer.setVisible(false);
         offresContainer.setVisible(false);
         statsContainer.setVisible(false);
         clientListContainer.setVisible(false);
         clientContainer.setVisible(true);
-    }//GEN-LAST:event_clientModifier1ActionPerformed
+    }//GEN-LAST:event_clientAddActionPerformed
+
+    private void clientModifier2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientModifier2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clientModifier2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1393,6 +1414,7 @@ public class Front extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ClientSurnameVariable;
     private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JButton clientAdd;
     private javax.swing.JLabel clientAgeTitle;
     private javax.swing.JLabel clientAgeVariable;
     private javax.swing.JLabel clientBirthdateTitle;
@@ -1410,7 +1432,7 @@ public class Front extends javax.swing.JFrame {
     private javax.swing.JLabel clientMailTitle;
     private javax.swing.JLabel clientMailVariable;
     private javax.swing.JButton clientModifier;
-    private javax.swing.JButton clientModifier1;
+    private javax.swing.JButton clientModifier2;
     private javax.swing.JLabel clientName;
     private javax.swing.JLabel clientNameTitle;
     private javax.swing.JLabel clientNameVariable;
