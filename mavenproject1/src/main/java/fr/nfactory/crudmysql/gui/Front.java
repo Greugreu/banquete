@@ -67,6 +67,46 @@ public class Front extends javax.swing.JFrame {
         offerTauxTitle = new javax.swing.JLabel();
         offerDescriptionVariable = new javax.swing.JLabel();
         offerModifier = new javax.swing.JButton();
+        offer1 = new javax.swing.JPanel();
+        offerTitle5 = new javax.swing.JLabel();
+        offerConditionTitle1 = new javax.swing.JLabel();
+        offerConditionVariable1 = new javax.swing.JLabel();
+        offerPlafondVariable1 = new javax.swing.JLabel();
+        offerPlafondTitle1 = new javax.swing.JLabel();
+        offerTauxVariable1 = new javax.swing.JLabel();
+        offerTauxTitle1 = new javax.swing.JLabel();
+        offerDescriptionVariable1 = new javax.swing.JLabel();
+        offerModifier1 = new javax.swing.JButton();
+        offer2 = new javax.swing.JPanel();
+        offerTitle6 = new javax.swing.JLabel();
+        offerConditionTitle2 = new javax.swing.JLabel();
+        offerConditionVariable2 = new javax.swing.JLabel();
+        offerPlafondVariable2 = new javax.swing.JLabel();
+        offerPlafondTitle2 = new javax.swing.JLabel();
+        offerTauxVariable2 = new javax.swing.JLabel();
+        offerTauxTitle2 = new javax.swing.JLabel();
+        offerDescriptionVariable2 = new javax.swing.JLabel();
+        offerModifier2 = new javax.swing.JButton();
+        offer3 = new javax.swing.JPanel();
+        offerTitle7 = new javax.swing.JLabel();
+        offerConditionTitle3 = new javax.swing.JLabel();
+        offerConditionVariable3 = new javax.swing.JLabel();
+        offerPlafondVariable3 = new javax.swing.JLabel();
+        offerPlafondTitle3 = new javax.swing.JLabel();
+        offerTauxVariable3 = new javax.swing.JLabel();
+        offerTauxTitle3 = new javax.swing.JLabel();
+        offerDescriptionVariable3 = new javax.swing.JLabel();
+        offerModifier3 = new javax.swing.JButton();
+        offer4 = new javax.swing.JPanel();
+        offerTitle8 = new javax.swing.JLabel();
+        offerConditionTitle4 = new javax.swing.JLabel();
+        offerConditionVariable4 = new javax.swing.JLabel();
+        offerPlafondVariable4 = new javax.swing.JLabel();
+        offerPlafondTitle4 = new javax.swing.JLabel();
+        offerTauxVariable4 = new javax.swing.JLabel();
+        offerTauxTitle4 = new javax.swing.JLabel();
+        offerDescriptionVariable4 = new javax.swing.JLabel();
+        offerModifier4 = new javax.swing.JButton();
         statsContainer = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         clientContainer = new javax.swing.JPanel();
@@ -105,6 +145,7 @@ public class Front extends javax.swing.JFrame {
         setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
         setMaximumSize(new java.awt.Dimension(1280, 720));
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(204, 51, 0));
@@ -162,15 +203,17 @@ public class Front extends javax.swing.JFrame {
             leftLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(leftLayoutLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1016, Short.MAX_VALUE))
+                .addGap(0, 990, Short.MAX_VALUE))
         );
 
         jPanel3.add(leftLayout, java.awt.BorderLayout.LINE_START);
 
         rightLayout.setBackground(new java.awt.Color(255, 255, 255));
+        rightLayout.setPreferredSize(new java.awt.Dimension(1151, 720));
         rightLayout.setLayout(new java.awt.CardLayout());
 
         rightContainer.setBackground(new java.awt.Color(255, 255, 255));
+        rightContainer.setPreferredSize(new java.awt.Dimension(1151, 720));
 
         loginContainer.setBackground(new java.awt.Color(255, 255, 255));
         loginContainer.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
@@ -297,11 +340,11 @@ public class Front extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(clientModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(717, Short.MAX_VALUE))
+                .addContainerGap(691, Short.MAX_VALUE))
         );
 
         offresContainer.setBackground(new java.awt.Color(255, 255, 255));
-        offresContainer.setPreferredSize(new java.awt.Dimension(1141, 720));
+        offresContainer.setPreferredSize(new java.awt.Dimension(1056, 720));
         offresContainer.setVisible(false);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -310,6 +353,7 @@ public class Front extends javax.swing.JFrame {
         jLabel2.setText("Liste des offres");
 
         offers.setBackground(new java.awt.Color(255, 255, 255));
+        offers.setPreferredSize(new java.awt.Dimension(1056, 572));
         offers.setLayout(new java.awt.GridLayout(2, 3, 30, 30));
 
         offer.setBackground(new java.awt.Color(24, 171, 232));
@@ -407,12 +451,416 @@ public class Front extends javax.swing.JFrame {
                     .addComponent(offerTauxVariable))
                 .addGap(18, 18, 18)
                 .addComponent(offerDescriptionVariable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(offerModifier, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         offers.add(offer);
+
+        offer1.setBackground(new java.awt.Color(24, 171, 232));
+        offer1.setForeground(new java.awt.Color(255, 255, 255));
+        offer1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offer1.setMinimumSize(new java.awt.Dimension(336, 271));
+
+        offerTitle5.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        offerTitle5.setForeground(new java.awt.Color(255, 255, 255));
+        offerTitle5.setText("Titre");
+
+        offerConditionTitle1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionTitle1.setText("Conditions :");
+
+        offerConditionVariable1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionVariable1.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionVariable1.setText("$condition");
+
+        offerPlafondVariable1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondVariable1.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondVariable1.setText("$plafond");
+
+        offerPlafondTitle1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondTitle1.setText("Plafond :");
+
+        offerTauxVariable1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxVariable1.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxVariable1.setText("$taux");
+
+        offerTauxTitle1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxTitle1.setText("Taux :");
+
+        offerDescriptionVariable1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerDescriptionVariable1.setForeground(new java.awt.Color(255, 255, 255));
+        offerDescriptionVariable1.setText("$description");
+
+        offerModifier1.setBackground(new java.awt.Color(255, 255, 255));
+        offerModifier1.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerModifier1.setForeground(new java.awt.Color(24, 171, 232));
+        offerModifier1.setText("Modifier");
+        offerModifier1.setMaximumSize(new java.awt.Dimension(147, 47));
+        offerModifier1.setMinimumSize(new java.awt.Dimension(147, 47));
+
+        javax.swing.GroupLayout offer1Layout = new javax.swing.GroupLayout(offer1);
+        offer1.setLayout(offer1Layout);
+        offer1Layout.setHorizontalGroup(
+            offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer1Layout.createSequentialGroup()
+                .addGroup(offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(offer1Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(offerTitle5))
+                    .addGroup(offer1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(offer1Layout.createSequentialGroup()
+                                .addComponent(offerConditionTitle1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerConditionVariable1))
+                            .addGroup(offer1Layout.createSequentialGroup()
+                                .addComponent(offerPlafondTitle1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerPlafondVariable1))
+                            .addGroup(offer1Layout.createSequentialGroup()
+                                .addComponent(offerTauxTitle1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerTauxVariable1))
+                            .addComponent(offerDescriptionVariable1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, offer1Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(offerModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
+        );
+        offer1Layout.setVerticalGroup(
+            offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(offerTitle5)
+                .addGap(18, 18, 18)
+                .addGroup(offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerConditionTitle1)
+                    .addComponent(offerConditionVariable1))
+                .addGap(18, 18, 18)
+                .addGroup(offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerPlafondTitle1)
+                    .addComponent(offerPlafondVariable1))
+                .addGap(18, 18, 18)
+                .addGroup(offer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerTauxTitle1)
+                    .addComponent(offerTauxVariable1))
+                .addGap(18, 18, 18)
+                .addComponent(offerDescriptionVariable1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(offerModifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        offers.add(offer1);
+
+        offer2.setBackground(new java.awt.Color(24, 171, 232));
+        offer2.setForeground(new java.awt.Color(255, 255, 255));
+        offer2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offer2.setMinimumSize(new java.awt.Dimension(336, 271));
+
+        offerTitle6.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        offerTitle6.setForeground(new java.awt.Color(255, 255, 255));
+        offerTitle6.setText("Titre");
+
+        offerConditionTitle2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionTitle2.setText("Conditions :");
+
+        offerConditionVariable2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionVariable2.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionVariable2.setText("$condition");
+
+        offerPlafondVariable2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondVariable2.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondVariable2.setText("$plafond");
+
+        offerPlafondTitle2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondTitle2.setText("Plafond :");
+
+        offerTauxVariable2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxVariable2.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxVariable2.setText("$taux");
+
+        offerTauxTitle2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxTitle2.setText("Taux :");
+
+        offerDescriptionVariable2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerDescriptionVariable2.setForeground(new java.awt.Color(255, 255, 255));
+        offerDescriptionVariable2.setText("$description");
+
+        offerModifier2.setBackground(new java.awt.Color(255, 255, 255));
+        offerModifier2.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerModifier2.setForeground(new java.awt.Color(24, 171, 232));
+        offerModifier2.setText("Modifier");
+        offerModifier2.setMaximumSize(new java.awt.Dimension(147, 47));
+        offerModifier2.setMinimumSize(new java.awt.Dimension(147, 47));
+
+        javax.swing.GroupLayout offer2Layout = new javax.swing.GroupLayout(offer2);
+        offer2.setLayout(offer2Layout);
+        offer2Layout.setHorizontalGroup(
+            offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer2Layout.createSequentialGroup()
+                .addGroup(offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(offer2Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(offerTitle6))
+                    .addGroup(offer2Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(offer2Layout.createSequentialGroup()
+                                .addComponent(offerConditionTitle2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerConditionVariable2))
+                            .addGroup(offer2Layout.createSequentialGroup()
+                                .addComponent(offerPlafondTitle2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerPlafondVariable2))
+                            .addGroup(offer2Layout.createSequentialGroup()
+                                .addComponent(offerTauxTitle2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerTauxVariable2))
+                            .addComponent(offerDescriptionVariable2))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, offer2Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(offerModifier2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
+        );
+        offer2Layout.setVerticalGroup(
+            offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(offerTitle6)
+                .addGap(18, 18, 18)
+                .addGroup(offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerConditionTitle2)
+                    .addComponent(offerConditionVariable2))
+                .addGap(18, 18, 18)
+                .addGroup(offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerPlafondTitle2)
+                    .addComponent(offerPlafondVariable2))
+                .addGap(18, 18, 18)
+                .addGroup(offer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerTauxTitle2)
+                    .addComponent(offerTauxVariable2))
+                .addGap(18, 18, 18)
+                .addComponent(offerDescriptionVariable2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(offerModifier2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        offers.add(offer2);
+
+        offer3.setBackground(new java.awt.Color(24, 171, 232));
+        offer3.setForeground(new java.awt.Color(255, 255, 255));
+        offer3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offer3.setMinimumSize(new java.awt.Dimension(336, 271));
+
+        offerTitle7.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        offerTitle7.setForeground(new java.awt.Color(255, 255, 255));
+        offerTitle7.setText("Titre");
+
+        offerConditionTitle3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionTitle3.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionTitle3.setText("Conditions :");
+
+        offerConditionVariable3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionVariable3.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionVariable3.setText("$condition");
+
+        offerPlafondVariable3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondVariable3.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondVariable3.setText("$plafond");
+
+        offerPlafondTitle3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondTitle3.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondTitle3.setText("Plafond :");
+
+        offerTauxVariable3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxVariable3.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxVariable3.setText("$taux");
+
+        offerTauxTitle3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxTitle3.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxTitle3.setText("Taux :");
+
+        offerDescriptionVariable3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerDescriptionVariable3.setForeground(new java.awt.Color(255, 255, 255));
+        offerDescriptionVariable3.setText("$description");
+
+        offerModifier3.setBackground(new java.awt.Color(255, 255, 255));
+        offerModifier3.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerModifier3.setForeground(new java.awt.Color(24, 171, 232));
+        offerModifier3.setText("Modifier");
+        offerModifier3.setMaximumSize(new java.awt.Dimension(147, 47));
+        offerModifier3.setMinimumSize(new java.awt.Dimension(147, 47));
+
+        javax.swing.GroupLayout offer3Layout = new javax.swing.GroupLayout(offer3);
+        offer3.setLayout(offer3Layout);
+        offer3Layout.setHorizontalGroup(
+            offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer3Layout.createSequentialGroup()
+                .addGroup(offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(offer3Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(offerTitle7))
+                    .addGroup(offer3Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(offer3Layout.createSequentialGroup()
+                                .addComponent(offerConditionTitle3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerConditionVariable3))
+                            .addGroup(offer3Layout.createSequentialGroup()
+                                .addComponent(offerPlafondTitle3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerPlafondVariable3))
+                            .addGroup(offer3Layout.createSequentialGroup()
+                                .addComponent(offerTauxTitle3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerTauxVariable3))
+                            .addComponent(offerDescriptionVariable3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, offer3Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(offerModifier3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
+        );
+        offer3Layout.setVerticalGroup(
+            offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer3Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(offerTitle7)
+                .addGap(18, 18, 18)
+                .addGroup(offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerConditionTitle3)
+                    .addComponent(offerConditionVariable3))
+                .addGap(18, 18, 18)
+                .addGroup(offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerPlafondTitle3)
+                    .addComponent(offerPlafondVariable3))
+                .addGap(18, 18, 18)
+                .addGroup(offer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerTauxTitle3)
+                    .addComponent(offerTauxVariable3))
+                .addGap(18, 18, 18)
+                .addComponent(offerDescriptionVariable3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(offerModifier3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        offers.add(offer3);
+
+        offer4.setBackground(new java.awt.Color(24, 171, 232));
+        offer4.setForeground(new java.awt.Color(255, 255, 255));
+        offer4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offer4.setMinimumSize(new java.awt.Dimension(336, 271));
+
+        offerTitle8.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        offerTitle8.setForeground(new java.awt.Color(255, 255, 255));
+        offerTitle8.setText("Titre");
+
+        offerConditionTitle4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionTitle4.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionTitle4.setText("Conditions :");
+
+        offerConditionVariable4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerConditionVariable4.setForeground(new java.awt.Color(255, 255, 255));
+        offerConditionVariable4.setText("$condition");
+
+        offerPlafondVariable4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondVariable4.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondVariable4.setText("$plafond");
+
+        offerPlafondTitle4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerPlafondTitle4.setForeground(new java.awt.Color(255, 255, 255));
+        offerPlafondTitle4.setText("Plafond :");
+
+        offerTauxVariable4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxVariable4.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxVariable4.setText("$taux");
+
+        offerTauxTitle4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerTauxTitle4.setForeground(new java.awt.Color(255, 255, 255));
+        offerTauxTitle4.setText("Taux :");
+
+        offerDescriptionVariable4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerDescriptionVariable4.setForeground(new java.awt.Color(255, 255, 255));
+        offerDescriptionVariable4.setText("$description");
+
+        offerModifier4.setBackground(new java.awt.Color(255, 255, 255));
+        offerModifier4.setFont(new java.awt.Font("Montserrat", 0, 12)); // NOI18N
+        offerModifier4.setForeground(new java.awt.Color(24, 171, 232));
+        offerModifier4.setText("Modifier");
+        offerModifier4.setMaximumSize(new java.awt.Dimension(147, 47));
+        offerModifier4.setMinimumSize(new java.awt.Dimension(147, 47));
+
+        javax.swing.GroupLayout offer4Layout = new javax.swing.GroupLayout(offer4);
+        offer4.setLayout(offer4Layout);
+        offer4Layout.setHorizontalGroup(
+            offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer4Layout.createSequentialGroup()
+                .addGroup(offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(offer4Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(offerTitle8))
+                    .addGroup(offer4Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(offer4Layout.createSequentialGroup()
+                                .addComponent(offerConditionTitle4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerConditionVariable4))
+                            .addGroup(offer4Layout.createSequentialGroup()
+                                .addComponent(offerPlafondTitle4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerPlafondVariable4))
+                            .addGroup(offer4Layout.createSequentialGroup()
+                                .addComponent(offerTauxTitle4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(offerTauxVariable4))
+                            .addComponent(offerDescriptionVariable4))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, offer4Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(offerModifier4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
+        );
+        offer4Layout.setVerticalGroup(
+            offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(offer4Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(offerTitle8)
+                .addGap(18, 18, 18)
+                .addGroup(offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerConditionTitle4)
+                    .addComponent(offerConditionVariable4))
+                .addGap(18, 18, 18)
+                .addGroup(offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerPlafondTitle4)
+                    .addComponent(offerPlafondVariable4))
+                .addGap(18, 18, 18)
+                .addGroup(offer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(offerTauxTitle4)
+                    .addComponent(offerTauxVariable4))
+                .addGap(18, 18, 18)
+                .addComponent(offerDescriptionVariable4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(offerModifier4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        offers.add(offer4);
 
         javax.swing.GroupLayout offresContainerLayout = new javax.swing.GroupLayout(offresContainer);
         offresContainer.setLayout(offresContainerLayout);
@@ -433,7 +881,7 @@ public class Front extends javax.swing.JFrame {
             .addGroup(offresContainerLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
-                .addGap(46, 46, 46)
+                .addGap(20, 20, 20)
                 .addComponent(offers, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -454,14 +902,14 @@ public class Front extends javax.swing.JFrame {
             .addGroup(statsContainerLayout.createSequentialGroup()
                 .addGap(479, 479, 479)
                 .addComponent(jLabel3)
-                .addContainerGap(479, Short.MAX_VALUE))
+                .addContainerGap(484, Short.MAX_VALUE))
         );
         statsContainerLayout.setVerticalGroup(
             statsContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statsContainerLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel3)
-                .addContainerGap(642, Short.MAX_VALUE))
+                .addContainerGap(1258, Short.MAX_VALUE))
         );
 
         clientContainer.setBackground(new java.awt.Color(255, 255, 255));
@@ -754,20 +1202,20 @@ public class Front extends javax.swing.JFrame {
                         .addComponent(clientName))
                     .addGroup(clientContainerLayout.createSequentialGroup()
                         .addComponent(clientInfoContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addGroup(clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(clientInfoContainer1, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
-                            .addComponent(clientInfoContainer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(27, 27, 27)
+                        .addGap(18, 18, 18)
+                        .addGroup(clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(clientInfoContainer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientInfoContainer1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addComponent(clientInfoContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         clientContainerLayout.setVerticalGroup(
             clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(clientContainerLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(clientName)
-                .addGap(41, 41, 41)
+                .addGap(20, 20, 20)
                 .addGroup(clientContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(clientInfoContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(clientContainerLayout.createSequentialGroup()
@@ -797,18 +1245,18 @@ public class Front extends javax.swing.JFrame {
         rightContainerLayout.setVerticalGroup(
             rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rightContainerLayout.createSequentialGroup()
-                .addContainerGap(921, Short.MAX_VALUE)
+                .addContainerGap(895, Short.MAX_VALUE)
                 .addComponent(loginContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(279, 279, 279))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1362, Short.MAX_VALUE))
+                .addComponent(clientListContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(rightContainerLayout.createSequentialGroup()
-                    .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 707, Short.MAX_VALUE)
+                    .addComponent(offresContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(clientContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 649, Short.MAX_VALUE)))
             .addGroup(rightContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1362, Short.MAX_VALUE))
+                .addComponent(statsContainer, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE))
         );
 
         rightLayout.add(rightContainer, "card2");
@@ -823,15 +1271,18 @@ public class Front extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-       
-        
+        loginContainer.setVisible(false);
+        offresContainer.setVisible(false);
+        statsContainer.setVisible(false);
+        clientListContainer.setVisible(true);
+        clientContainer.setVisible(false);
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
@@ -983,19 +1434,59 @@ public class Front extends javax.swing.JFrame {
     private javax.swing.JPanel loginContainer;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel offer;
+    private javax.swing.JPanel offer1;
+    private javax.swing.JPanel offer2;
+    private javax.swing.JPanel offer3;
+    private javax.swing.JPanel offer4;
     private javax.swing.JLabel offerConditionTitle;
+    private javax.swing.JLabel offerConditionTitle1;
+    private javax.swing.JLabel offerConditionTitle2;
+    private javax.swing.JLabel offerConditionTitle3;
+    private javax.swing.JLabel offerConditionTitle4;
     private javax.swing.JLabel offerConditionVariable;
+    private javax.swing.JLabel offerConditionVariable1;
+    private javax.swing.JLabel offerConditionVariable2;
+    private javax.swing.JLabel offerConditionVariable3;
+    private javax.swing.JLabel offerConditionVariable4;
     private javax.swing.JLabel offerDescriptionVariable;
+    private javax.swing.JLabel offerDescriptionVariable1;
+    private javax.swing.JLabel offerDescriptionVariable2;
+    private javax.swing.JLabel offerDescriptionVariable3;
+    private javax.swing.JLabel offerDescriptionVariable4;
     private javax.swing.JButton offerModifier;
+    private javax.swing.JButton offerModifier1;
+    private javax.swing.JButton offerModifier2;
+    private javax.swing.JButton offerModifier3;
+    private javax.swing.JButton offerModifier4;
     private javax.swing.JLabel offerPlafondTitle;
+    private javax.swing.JLabel offerPlafondTitle1;
+    private javax.swing.JLabel offerPlafondTitle2;
+    private javax.swing.JLabel offerPlafondTitle3;
+    private javax.swing.JLabel offerPlafondTitle4;
     private javax.swing.JLabel offerPlafondVariable;
+    private javax.swing.JLabel offerPlafondVariable1;
+    private javax.swing.JLabel offerPlafondVariable2;
+    private javax.swing.JLabel offerPlafondVariable3;
+    private javax.swing.JLabel offerPlafondVariable4;
     private javax.swing.JLabel offerTauxTitle;
+    private javax.swing.JLabel offerTauxTitle1;
+    private javax.swing.JLabel offerTauxTitle2;
+    private javax.swing.JLabel offerTauxTitle3;
+    private javax.swing.JLabel offerTauxTitle4;
     private javax.swing.JLabel offerTauxVariable;
+    private javax.swing.JLabel offerTauxVariable1;
+    private javax.swing.JLabel offerTauxVariable2;
+    private javax.swing.JLabel offerTauxVariable3;
+    private javax.swing.JLabel offerTauxVariable4;
     private javax.swing.JLabel offerTitle;
     private javax.swing.JLabel offerTitle1;
     private javax.swing.JLabel offerTitle2;
     private javax.swing.JLabel offerTitle3;
     private javax.swing.JLabel offerTitle4;
+    private javax.swing.JLabel offerTitle5;
+    private javax.swing.JLabel offerTitle6;
+    private javax.swing.JLabel offerTitle7;
+    private javax.swing.JLabel offerTitle8;
     private javax.swing.JPanel offers;
     private javax.swing.JButton offresButton;
     private javax.swing.JPanel offresContainer;
